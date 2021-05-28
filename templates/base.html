@@ -13,13 +13,44 @@
     <title>Vinyl Revival</title>
 </head>
 <body>
-    <h1>I'm part of the base template</h1>
+    
+    <header>
+        <!-- top navbar-->
+        <nav class="nav-extended grey darken-4">
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">Vinyl Revival</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Add Record</a></li>
+                <li><a href="#">Manage Genres</a></li>
+                <li><a href="#">Log Out</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Register</a></li>    
+              </ul>
+            </div>
+          </nav>
+        
+         <!-- mobile navbar --> 
+          <ul class="sidenav grey darken-4 white-text" id="mobile-demo">
+                <li><h4 class="center-align white-text">Vinyl Revival</h4></li>
+                <li><a href="#" class="white-text">Home</a></li>
+                <li><a href="#" class="white-text">Profile</a></li>
+                <li><a href="#" class="white-text">Add Record</a></li>
+                <li><a href="#" class="white-text">Manage Genres</a></li>
+                <li><a href="#" class="white-text">Log Out</a></li>
+                <li><a href="#" class="white-text">Log In</a></li>
+                <li><a href="#" class="white-text">Register</a></li>    
+          </ul>
+    </header>
+
     {% block content %}
     {% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/scipt.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 </body>
