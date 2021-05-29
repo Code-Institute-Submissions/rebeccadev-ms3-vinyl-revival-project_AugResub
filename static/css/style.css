@@ -3,18 +3,14 @@ a {
   }
 
   body {
-    Font-Family: 'Rubik', Sans-Serif;
-    Font-Size: 15px;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    Font-Family: 'Old Standard TT', Serif;
-  }
+    font-family: 'Chivo', sans-serif;
+    font-weight: 500;
+   }
+   
+   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+   }
 
 .flashes h6 {
   line-height: 2;

@@ -1,17 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template</h2>
+    <h2 class ="center center-align">Latest listens...</h2>
+
 
     {% for record in record %}
-        {{ record.genre_name }}<br>
-        {{ record.record_name }}<br>
-        {{ record.artist }}<br>
-        {{ record.release_date }}<br>
-        {{ record.length }}<br>
-        {{ record.tracklisting }}<br>
-        {{ record.rating }}<br>
-        {{ record.is_favourite }}<br>
+    <div class="row">
+            
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{ record.album_art }}">
+                </div>
+                    <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{ record.record_name }} <br>
+                        Artist: {{ record.artist }}<i class="material-icons right"> {{ record.genre_name }}</i></span>
+                    <p><a href="#">This is a link</a></p>
+                    </div>
+                        <div class="card-action">
+                        Rating: {{ record.rating }}
+                        <span class="right">
+                        {% if record.is_favourite == "on" %}
+                            <i class="right fas  fa-2x fa-heart red-text tooltipped"
+                            data-position="right" data-tooltip="Favourite Vinyl!"></i></span>
+                        {% endif %}
+                        </div>
+                      
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Extra info<i class="material-icons right">close</i></span>
+                        <p>Tracklisting:
+                            <ol> 
+                                {% for tracklisting in record.tracklisting %}
+                                <li>{{ tracklisting}}</li>
+                                {% endfor %}
+                            </ol>
+                        </p>
+                        <p> Length: {{ record.length }}</p>
+                        <p> Release date: {{ record.release_date }}</p>
+                    </div>
+            </div>   
+        </div>
+                    <div class="col s8">
+                    second column
+                    </div>
+    </div>
     {% endfor %}
 
 {% endblock %}

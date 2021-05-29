@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_record")
 def get_record():
-    record = mongo.db.record.find()
+    record = list(mongo.db.record.find())
     return render_template("records.html", record=record)
 
 
