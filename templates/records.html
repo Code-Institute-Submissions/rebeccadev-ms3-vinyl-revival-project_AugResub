@@ -1,7 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
+ 
+<div class="row">
+    <div class="col s4 pt50">
+        <h3>Listen <br>up...</h3> <br>
+            <span class="valign-wrapper">
+                Vinyl revival has been created by record enthusiasts in response
+                to the resurgence in vinyl. New figures reveal that nearly one in five
+                 (18%) of all albums purchased across 2020 were vinyl, with 4.8 million LPs
+                being purchased. <br> <br> We aim to be the go to app to for vinyl enthusiasts. Here
+                you will be able to upload your record collection, review records, and view
+                others collections.
+            </span>
+    </div>
+    <div class="col s8 pt50">
+        <img class="responsive-img" src="static/images/vinylheroimg.jpg">
+    </div>
+</div>
 
-    <h2 class ="center center-align">Latest listens...</h2>
+<div class="row">
+
+    <div class="col s4 center-align">
+        <i class="fas fa-4x fa-pencil-alt"></i><br>
+        Register for your account with us. <br>
+        It's free and always will be!
+    </div>
+        <div class="col s4 center-align">
+        <i class="fas fa-4x fa-compact-disc"></i><br>
+        Start adding records to your collection. <br>
+        We also give you the option to highlight <br>
+        your faves!
+        </div>
+        <div class="col s4 center-align">
+            <i class="far fa-4x fa-comment-dots"></i><br>
+        Leave reviews of other uploaded records, give ratings aswell
+        as written reviews.
+        </div>
+
+  </div>
+
+    <h2 class ="center center-align">Latest sounds</h2>
 
 
     {% for record in record %}

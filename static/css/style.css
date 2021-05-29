@@ -12,6 +12,11 @@ a {
     text-transform: uppercase;
    }
 
+   .pt50 {
+    padding-top: 50px!important
+  }
+  
+
 .flashes h6 {
   line-height: 2;
 }
