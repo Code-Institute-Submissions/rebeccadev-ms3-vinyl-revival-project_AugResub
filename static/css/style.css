@@ -14,6 +14,9 @@ a {
   h5,
   h6 {
     Font-Family: 'Old Standard TT', Serif;
-    Font-Size: 48px;
   }
+
+.flashes h6 {
+  line-height: 2;
+}
   
