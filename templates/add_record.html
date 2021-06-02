@@ -8,14 +8,95 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-          <i class="fas fa-user-circle prefix"></i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">First Name</label>
+          <i class="fas fa-record-vinyl prefix"></i>
+          <input id="record_name" name="record_name" minlength="1" maxlength="50"
+           type="text" class="validate" required>
+          <label for="record_name">Record Name</label>
         </div>
+      </div>
+      <div class="row">
         <div class="input-field col s12">
-            <i class="fas fa-phone prefix"></i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Telephone</label>
+          <i class="fas fa-user-tag prefix"></i>
+          <input id="artist" name="artist" minlength="1" maxlength="50"
+          type="text" class="validate" required>
+         <label for="artist">Artist</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-music prefix"></i>
+          <a class="btn-floating btn-large waves-effect waves-light black right"><i class="material-icons">+</i></a>
+          <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
+          type="text" class="validate" required>
+         <label for="tracklisting">Track 1.</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-music prefix"></i>
+          <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
+          type="text" class="validate">
+          <label for="tracklisting">Track 2.</label>
+        </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12">
+            <i class="fas fa-music prefix"></i>
+            <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
+            type="text" class="validate">
+            <label for="tracklisting">Track 3.</label>
+          </div>
+      </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fas fa-music prefix"></i>
+            <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
+            type="text" class="validate">
+            <label for="tracklisting">Track 4.</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fas fa-music prefix"></i>
+            <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
+            type="text" class="validate">
+            <label for="tracklisting">Track 5.</label>
+          </div>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-hourglass-half prefix"></i>
+          <input id="length" name="length" minlength="1" maxlength="50"
+          type="text" class="validate" required>
+         <label for="length">Length</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-calendar-alt prefix"></i>
+          <input id="release_date" name="release_date" 
+          type="text" class="datepicker validate" required>
+         <label for="release_date"> Release Date</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-image prefix"></i>
+          <input id="album_art" name="album_art" minlength="10" maxlength="50"
+          type="text" class="validate" required>
+         <label for="album_art">Album Art</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="switch">
+            <i class="fas fa-heart prefix"></i>
+            <label for="is_urgent">
+              <input type="checkbox" id="is_favourite" name="is_favourite">
+              <span class="lever"></span>
+              Favourite? 
+            </label>
+          </div>
         </div>
       </div>
     </form>
