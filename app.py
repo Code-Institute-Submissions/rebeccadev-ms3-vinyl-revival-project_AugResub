@@ -99,8 +99,24 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_record")
+@app.route("/add_record", methods=["GET", "POST"])
 def add_record():
+    if request.method == "POST":
+        is_favourite = "on" if request.form.get("is_favourite") else "off"
+        record = {
+            "genre_name": request.form.get("genre_name"),
+            "record_name": request.form.get("record_name"),
+            "artist": request.form.get("artist"),
+            "tracklisting": request.form.getlist("tracklisting"),
+            "length": request.form.get("length"),
+            "release_date": request.form.get("release_date"),
+            "album_art": request.form.get("album_art"),
+            "is_favourite": is_favourite,
+            "created_by": session["user"]
+        }
+        mongo.db.records.insert_one(record)
+        flash("Record Successfully Added")
+        return redirect(url_for("get_record"))
     genres = mongo.db.genres.find().sort("genre_name, 1")
     return render_template("add_record.html", genres=genres)
 
