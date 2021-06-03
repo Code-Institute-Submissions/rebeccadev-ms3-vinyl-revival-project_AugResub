@@ -117,6 +117,7 @@ def add_record():
         mongo.db.record.insert_one(record)
         flash("Record Successfully Added")
         return redirect(url_for("get_record"))
+        
     genres = mongo.db.genres.find().sort("genre_name, 1")
     return render_template("add_record.html", genres=genres)
 

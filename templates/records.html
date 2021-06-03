@@ -53,7 +53,7 @@
                     <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">{{ record.record_name }} <br>
                         Artist: {{ record.artist }}<i class="material-icons right"> {{ record.genre_name }}</i></span>
-                    <p><em>by: { record.created_by } </em></p>
+                    <p><em>Added by: {{ record.created_by }} </em></p>
                     </div>
                         <div class="card-action">
                         Rating: {{ record.rating }}/5
@@ -78,10 +78,7 @@
                     </div>
             </div>   
         </div>
-                    <div class="col s8">
-                    second column
-                    </div>
-    </div>
+                    
     {% endfor %}
 
 {% endblock %}
