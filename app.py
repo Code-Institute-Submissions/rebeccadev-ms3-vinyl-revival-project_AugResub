@@ -114,7 +114,7 @@ def add_record():
             "is_favourite": is_favourite,
             "created_by": session["user"]
         }
-        mongo.db.records.insert_one(record)
+        mongo.db.record.insert_one(record)
         flash("Record Successfully Added")
         return redirect(url_for("get_record"))
     genres = mongo.db.genres.find().sort("genre_name, 1")

@@ -53,10 +53,10 @@
                     <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">{{ record.record_name }} <br>
                         Artist: {{ record.artist }}<i class="material-icons right"> {{ record.genre_name }}</i></span>
-                    <p><em>by: { task.created_by } </em></p>
+                    <p><em>by: { record.created_by } </em></p>
                     </div>
                         <div class="card-action">
-                        Rating: {{ record.rating }}
+                        Rating: {{ record.rating }}/5
                         <span class="right">
                         {% if record.is_favourite == "on" %}
                             <i class="right fas  fa-2x fa-heart red-text tooltipped"
