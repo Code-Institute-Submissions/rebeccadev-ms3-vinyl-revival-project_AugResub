@@ -23,46 +23,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s12 field_wrapper">
           <i class="fas fa-music prefix"></i>
-          <a class="btn-floating btn-large waves-effect waves-light black right"><i class="material-icons">+</i></a>
-          <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
-          type="text" class="validate" required>
+          <input type="text" id="tracklisting" name="tracklisting" value=""/>
+          <a href="javascript:void(0);" class="add_button" title="Add field"><img src="static/images/add-button.png"/></a>
          <label for="tracklisting">Track 1.</label>
         </div>
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="fas fa-music prefix"></i>
-          <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
-          type="text" class="validate">
-          <label for="tracklisting">Track 2.</label>
-        </div>
-      </div>
-      <div class="row">
-          <div class="input-field col s12">
-            <i class="fas fa-music prefix"></i>
-            <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
-            type="text" class="validate">
-            <label for="tracklisting">Track 3.</label>
-          </div>
-      </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="fas fa-music prefix"></i>
-            <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
-            type="text" class="validate">
-            <label for="tracklisting">Track 4.</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="fas fa-music prefix"></i>
-            <input id="tracklisting" name="tracklisting" minlength="1" maxlength="50"
-            type="text" class="validate">
-            <label for="tracklisting">Track 5.</label>
-          </div>
-        </div>
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-hourglass-half prefix"></i>
@@ -87,17 +54,19 @@
          <label for="album_art">Album Art</label>
         </div>
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <div class="switch">
-            <i class="fas fa-heart prefix"></i>
-            <label for="is_urgent">
-              <input type="checkbox" id="is_favourite" name="is_favourite">
-              <span class="lever"></span>
-              Favourite? 
-            </label>
-          </div>
-        </div>
+      <!-- is urgent toggle -->
+			<div class="row">
+				<div class="input-field col s12">
+					<div class="switch">
+              <i class="fas fa-heart"></i>
+						    <label for="is_favourite">
+                  <input type="checkbox" id="is_favourite" name="is_favourite">
+                  <span class="lever"></span>
+                  Favourite?
+                  </label>
+					</div>
+				</div>
+			</div>
       </div>
     </form>
   </div>
