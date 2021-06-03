@@ -101,7 +101,8 @@ def logout():
 
 @app.route("/add_record")
 def add_record():
-    return render_template("add_record.html")
+    genres = mongo.db.genres.find().sort("genre_name, 1")
+    return render_template("add_record.html", genres=genres)
 
 
 if __name__ == "__main__":

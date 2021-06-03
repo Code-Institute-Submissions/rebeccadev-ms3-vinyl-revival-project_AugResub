@@ -8,6 +8,18 @@
     <form class="col s12" method="POST" action="">
       <div class="row">
         <div class="input-field col s12">
+          <i class="fas fa-tag prefix"></i>
+          <select id="genre_name" name="genre_name" class="validate">
+            <option value="" disabled selected>Choose Genre</option>
+            {% for genre in genres %}
+              <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+            {% endfor %}
+          </select>
+            <label for="genre_name">Genre</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
           <i class="fas fa-record-vinyl prefix"></i>
           <input id="record_name" name="record_name" minlength="1" maxlength="50"
            type="text" class="validate" required>
@@ -33,9 +45,9 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-hourglass-half prefix"></i>
-          <input id="length" name="length" minlength="1" maxlength="50"
-          type="text" class="validate" required>
-         <label for="length">Length</label>
+          <input id="length" name="length" minlength="1" maxlength="6"
+            pattern="^[0-9]{1,6}]$" type="text" class="validate" required>
+         <label for="length">Length in minutes</label>
         </div>
       </div>
       <div class="row">
