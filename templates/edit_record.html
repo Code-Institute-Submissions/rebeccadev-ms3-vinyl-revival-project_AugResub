@@ -10,9 +10,13 @@
         <div class="input-field col s12">
           <i class="fas fa-tag prefix"></i>
           <select id="genre_name" name="genre_name" class="validate">
-            <option value="" disabled selected>Choose Genre</option>
+            <option value="" disabled>Choose Genre</option>
             {% for genre in genres %}
-              <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+              {% if genre.genre_name == record.genre_name %}
+                <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
+              {% else %}
+                <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+              {% endif %}
             {% endfor %}
           </select>
             <label for="genre_name">Genre</label>
@@ -23,7 +27,7 @@
         <div class="input-field col s12">
           <i class="fas fa-record-vinyl prefix"></i>
           <input id="record_name" name="record_name" minlength="1" maxlength="50"
-           type="text" class="validate" required>
+            value="{{ record.record_name }}" type="text" class="validate" required>
           <label for="record_name">Record Name</label>
         </div>
       </div>
@@ -32,17 +36,21 @@
         <div class="input-field col s12">
           <i class="fas fa-user-tag prefix"></i>
           <input id="artist" name="artist" minlength="1" maxlength="50"
-          type="text" class="validate" required>
+            value="{{ record.artist }}" type="text" class="validate" required>
          <label for="artist">Artist</label>
         </div>
       </div>
       <!-- Tracklisting -->
+      {% for track in record.tracklisting %}
       <div class="row">
         <div class="input-field col s12 field_wrapper">
           <i class="fas fa-music prefix"></i>
-          <input type="text" id="tracklisting" name="tracklisting" value=""/>
-          <a href="javascript:void(0);" class="add_button" title="Add field"><img src="static/images/add-button.png"/></a>
-         <label for="tracklisting">Track</label>
+          <input type="text" id="tracklisting" name="tracklisting"
+           value="{{track}}"><br>
+          <label for="tracklisting">Track</label>
+        {% endfor %}
+        
+         
         </div>
       </div>
       <!-- Album Length -->
@@ -50,7 +58,7 @@
         <div class="input-field col s12">
           <i class="fas fa-hourglass-half prefix"></i>
           <input id="length" name="length" minlength="1" maxlength="6"
-            pattern="^[0-9]{1,6}]$" type="text" class="validate" required>
+            value="{{ record.length }}" pattern="^[0-9]{1,6}]$" type="text" class="validate" required>
          <label for="length">Length in minutes</label>
         </div>
       </div>
@@ -59,7 +67,7 @@
         <div class="input-field col s12">
           <i class="fas fa-calendar-alt prefix"></i>
           <input id="release_date" name="release_date" 
-          type="text" class="datepicker validate" required>
+            value="{{ record.release_date }}" type="text" class="datepicker validate" required>
          <label for="release_date"> Release Date</label>
         </div>
       </div>
@@ -68,7 +76,7 @@
         <div class="input-field col s12">
           <i class="fas fa-image prefix"></i>
           <input id="album_art" name="album_art" minlength="10" maxlength="90"
-          type="text" class="validate" required>
+            value="{{ record.album_art }}" type="text" class="validate" required>
          <label for="album_art">Album Art</label>
         </div>
       </div>
@@ -77,12 +85,18 @@
         <div class="input-field col s12">
           <i class="fas fa-star-half-alt prefix"></i>  
           <select id="rating" name="rating" class="validate">
-            <option value="" disabled selected>Rating out of 5</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="4">5</option>
+            <option value="" disabled>Rating out of 5</option>
+            {% if record.rating =="1" %}
+            <option value="1" selected>1</option>
+            {% elif record.rating == "2" %}
+            <option value="2" selected>2</option>
+            {% elif record.rating == "3" %}
+            <option value="3" selected>3</option>
+            {% elif record.rating == "4" %}
+            <option value="4" selected>4</option>
+            {% elif record.rating == "5" %}
+            <option value="5" selected>5</option>
+            {% endif %}
           </select>
           <label>Rating</label>
         </div>
@@ -93,7 +107,11 @@
 					<div class="switch">
               <i class="fas fa-heart prefix"></i>
 						    <label for="is_favourite">
-                  <input type="checkbox" id="is_favourite" name="is_favourite">
+                  {% if record.is_favourite == "on" %}
+                    <input type="checkbox" id="is_favourite" name="is_favourite" checked>
+                  {% else %}
+                    <input type="checkbox" id="is_favourite" name="is_favourite">
+                  {% endif %}
                   <span class="lever"></span>
                   Favourite?
                   </label>
@@ -104,6 +122,8 @@
       <!-- submit -->
       <div class="row">
         <div class="col s12 center-align">
+          <a href="{{ url_for('get_record') }}" class="btn waves-effect waves-light" type="cancel">
+            Cancel<i class="fas fa-times-circle right"></i></a>
           <button class="btn waves-effect waves-light" type="submit">
            Edit record <i class="fas fa-edit right"></i>            
           </button>
