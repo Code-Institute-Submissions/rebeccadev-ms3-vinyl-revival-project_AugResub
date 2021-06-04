@@ -141,12 +141,18 @@ def edit_record(record_id):
         }
         mongo.db.record.update({"_id": ObjectId(record_id)}, submit)
         flash("Record Successfully Updated")
-        
-    
+         
 
     record = mongo.db.record.find_one({"_id": ObjectId(record_id)})
     genres = mongo.db.genres.find().sort("genre_name, 1")
     return render_template("edit_record.html", record=record, genres=genres)
+
+
+@app.route("/delete_record/<record_id>")
+def delete_record(record_id):
+    mongo.db.record.remove({"_id": ObjectId(record_id)})
+    flash("Record Deleted")
+    return redirect(url_for("get_record"))
 
 
 if __name__ == "__main__":
