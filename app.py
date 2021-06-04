@@ -125,8 +125,26 @@ def add_record():
 
 @app.route("/edit_record/<record_id>", methods=["GET", "POST"])
 def edit_record(record_id):
-    record = mongo.db.record.find_one({"_id": ObjectId(record_id)})
+    if request.method == "POST":
+        is_favourite = "on" if request.form.get("is_favourite") else "off"
+        submit = {
+            "genre_name": request.form.get("genre_name"),
+            "record_name": request.form.get("record_name"),
+            "artist": request.form.get("artist"),
+            "tracklisting": request.form.getlist("tracklisting"),
+            "length": request.form.get("length"),
+            "release_date": request.form.get("release_date"),
+            "album_art": request.form.get("album_art"),
+            "is_favourite": is_favourite,
+            "rating": request.form.get("rating"),
+            "created_by": session["user"]
+        }
+        mongo.db.record.update({"_id": ObjectId(record_id)}, submit)
+        flash("Record Successfully Updated")
+        
+    
 
+    record = mongo.db.record.find_one({"_id": ObjectId(record_id)})
     genres = mongo.db.genres.find().sort("genre_name, 1")
     return render_template("edit_record.html", record=record, genres=genres)
 
