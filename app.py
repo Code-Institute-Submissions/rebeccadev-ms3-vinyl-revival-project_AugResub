@@ -123,6 +123,14 @@ def add_record():
     return render_template("add_record.html", genres=genres)
 
 
+@app.route("/edit_record/<record_id>", methods=["GET", "POST"])
+def edit_record(record_id):
+    record = mongo.db.record.find_one({"_id": ObjectId(record_id)})
+
+    genres = mongo.db.genres.find().sort("genre_name, 1")
+    return render_template("edit_record.html", record=record, genres=genres)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
