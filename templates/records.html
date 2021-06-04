@@ -20,18 +20,18 @@
 
 <div class="row">
 
-    <div class="col s4 center-align">
+    <div class="col s4 center-align pt100 pb100">
         <i class="fas fa-4x fa-pencil-alt"></i><br>
         Register for your account with us. <br>
         It's free and always will be!
     </div>
-        <div class="col s4 center-align">
+        <div class="col s4 center-align pt100 pb100">
         <i class="fas fa-4x fa-compact-disc"></i><br>
         Start adding records to your collection. <br>
         We also give you the option to highlight <br>
         your faves!
         </div>
-        <div class="col s4 center-align">
+        <div class="col s4 center-align pt100 pb100">
             <i class="far fa-4x fa-comment-dots"></i><br>
         Leave reviews of other uploaded records, give ratings aswell
         as written reviews.
@@ -39,7 +39,7 @@
 
   </div>
 
-    <h2 class ="center center-align">Latest sounds</h2>
+    <h2 class ="center center-align pb100">Latest sounds</h2>
 
 
     {% for record in record %}
@@ -66,7 +66,20 @@
                             </span>           
                         {% if session.user|lower == record.created_by|lower %}
                         <a href="{{ url_for('edit_record', record_id=record._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                        <a href="{{ url_for('delete_record', record_id=record._id) }}" class="waves-effect waves-light btn-small red">Delete</a>
+                         <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                 <h4>Remove a record?</h4>
+                                <p>Are you sure you want to remove a record from your collection? </p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{{ url_for('delete_record', record_id=record._id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                                <a href="{{ url_for('get_record') }}" class="modal-close waves-effect waves-green btn-flat">No, take me back!</a> 
+                            </div>
+                        </div>
                         {% endif %}
                         </div>
                       

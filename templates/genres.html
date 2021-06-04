@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Manage Genres</h3>
+
+<div class="row">
+    {% for genre in genres %}
+    <div class="col s12 m3">
+      <div class="card black center-align">
+        <div class="card-content white-text">
+          <span class="card-title">{{ genre.genre_name }}</span>
+        </div>
+        <div class="card-action">
+            <a href="" class="waves-effect waves-light btn-small">Edit</a>
+            <!-- Modal Trigger -->
+           <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
+
+           <!-- Modal Structure -->
+           <div id="modal1" class="modal">
+               <div class="modal-content">
+                    <h4>Remove a genre?</h4>
+                   <p>Are you sure you want to remove a genre?</p>
+               </div>
+               <div class="modal-footer">
+                   <a href="" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                   <a href="{{ url_for('get_record') }}" class="modal-close waves-effect waves-green btn-flat">No, take me back!</a> 
+               </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

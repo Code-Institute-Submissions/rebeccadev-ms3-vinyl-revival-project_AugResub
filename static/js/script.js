@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.tooltipped').tooltip();
     $('select').formSelect();
+    $('.modal').modal();
     $('.datepicker').datepicker({
       format: "dd mmmm, yyyy",
       maxDate: new Date(),
