@@ -54,14 +54,17 @@
                     <span class="card-title activator grey-text text-darken-4">{{ record.record_name }} <br>
                         Artist: {{ record.artist }}<i class="material-icons right"> {{ record.genre_name }}</i></span>
                     <p><em>Added by: {{ record.created_by }} </em></p>
+                            Rating: {{ record.rating }}/5
+                            <span class="right">
+                                {% if record.is_favourite == "on" %}
+                                <i class="right fas  fa-2x fa-heart red-text tooltipped"
+                                data-position="right" data-tooltip="Favourite Vinyl!"></i></span>
+                                {% endif %}
                     </div>
                         <div class="card-action">
-                        Rating: {{ record.rating }}/5
-                        <span class="right">
-                        {% if record.is_favourite == "on" %}
-                            <i class="right fas  fa-2x fa-heart red-text tooltipped"
-                            data-position="right" data-tooltip="Favourite Vinyl!"></i></span>
-                        {% endif %}
+                        
+                        <a href="" class="waves-effect waves-light btn-small ">Edit</a>
+                        <a href="" class="waves-effect waves-light btn-small red">Delete</a>
                         </div>
                       
                     <div class="card-reveal">
