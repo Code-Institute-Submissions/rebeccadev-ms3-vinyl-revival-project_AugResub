@@ -112,6 +112,7 @@ def add_record():
             "release_date": request.form.get("release_date"),
             "album_art": request.form.get("album_art"),
             "is_favourite": is_favourite,
+            "rating": request.form.get("rating"),
             "created_by": session["user"]
         }
         mongo.db.record.insert_one(record)
