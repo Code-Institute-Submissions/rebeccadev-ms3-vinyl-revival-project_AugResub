@@ -31,7 +31,7 @@
 {% for record in user_collection %}
 <div class="row">
         
-    <div class="col s4">
+    <div class="col s12 m4 l4">
         <div class="card large">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ record.album_art }}">
@@ -51,9 +51,9 @@
                         <em>Added by: {{ record.created_by }} </em></p>       
                         </span>           
                     {% if session.user|lower == record.created_by|lower %}
-                    <a href="{{ url_for('edit_record', record_id=record._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                    <a href="{{ url_for('edit_record', record_id=record._id) }}" class="waves-effect waves-light btn grey darken-2">Edit</a>
                      <!-- Modal Trigger -->
-                    <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
+                    <a class="waves-effect waves-light btn modal-trigger grey" href="#modal1">Delete</a>
 
                     <!-- Modal Structure -->
                     <div id="modal1" class="modal">
