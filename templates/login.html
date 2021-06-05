@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-
-<h3 class="center-align">Log In</h3>
-
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+    <div class="col s12 m6 l6 offset-l3">
+<h3 class="center-align">Log In</h3>
+<img class="responsive-img center-align" src="static/images/vinyllogin.jpg">
+    </div>
+</div>
+<div class="row">
+    <form class="col s12 m6 l6 offset-l3" method="POST" action="{{ url_for('login') }}">
         <div class="card-panel">
             <!-- Username -->
             <div class="row">
