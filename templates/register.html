@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="row">
+    <div class="col s12 m6 l6 offset-l3">
 <h3 class="center-align">Register</h3>
+<img class="responsive-img center-align" src="static/images/vinylregistration.jpg">
+    </div>
+</div>
 
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m6 offset-l3" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel">
             <!-- Username -->
             <div class="row">
@@ -26,7 +31,7 @@
             </div>
             <!-- Register button -->
             <div class="row">
-                <button type="submit" class="col s12 btn-large blue-grey darken-3">
+                <button type="submit" class="col s12 btn-large grey darken-3">
                     Register <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>
