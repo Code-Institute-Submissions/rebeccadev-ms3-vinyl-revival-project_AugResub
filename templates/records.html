@@ -53,9 +53,23 @@
             </span>
     </div>
 </div>
-
-
-
+    <div class="row">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="query" id="query" minlength="2" class="validate" required>
+                    <label for="query">Search Records</label>   
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_record') }}" class="red btn text-shadow">Reset</a>
+                    <button type="submit" class="grey">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
+            </div>    
+        </form>
+    </div>
     {% for record in record %}
     <div class="row">
             
@@ -113,5 +127,5 @@
         </div>
                     
     {% endfor %}
-
+      
 {% endblock %}
