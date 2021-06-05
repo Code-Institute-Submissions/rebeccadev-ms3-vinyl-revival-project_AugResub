@@ -23,7 +23,18 @@ a {
   .pb100 {
     padding-bottom: 100px!important
   }
-  
+
+  .pb50 {
+    padding-bottom: 50px!important
+  }
+
+  .pl50 {
+    padding-left: 50px;
+  }
+
+.pr50 {
+    padding-right: 50px;
+  }
 
 .flashes h6 {
   line-height: 2;

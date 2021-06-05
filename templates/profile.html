@@ -14,22 +14,21 @@
 </div>
 
 <div class="row">
-    <div class="col s4 pt50">
+    <div class="col s12 l6 pt50">
         <h3>Your <br> Collection </h3> <br>
-            <span class="valign-wrapper">
+            <span class="valign-wrapper pr50">
                 View all of your uploaded records below! Click the album artwork
                 to display extra information such as tracklisting, release dates
                 and the length of the record! 
             </span>
     </div>
-    <div class="col s8 pt50">
-        <img class="responsive-img" src="static/images/recordcollection.jpg">
+    <div class="col s12 m6 pt50 pb100">
+        <img class="responsive-img" src="https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/static/images/recordcollection.jpg?raw=true">
     </div>
 </div>
 
 
-{% for record in record %}
-    {% if session.user|lower == record.created_by|lower %}
+{% for record in user_collection %}
 <div class="row">
         
     <div class="col s4">
@@ -84,7 +83,8 @@
                 </div>
         </div>   
     </div>
-    {% endif %}                
+                
 {% endfor %}
+
 
 {% endblock %}
