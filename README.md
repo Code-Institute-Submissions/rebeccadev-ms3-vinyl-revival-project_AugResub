@@ -58,6 +58,12 @@ As an Admin user I want to be able to:
 
 ### Skeleton
 
+#### Database
+
+The db will consist of four collections. 
+
+ ![bd biagram](/workspace/ms3-vinyl-revival-project/readme_documentation/dbdiagram.png)
+
 #### Wireframes
 
 ![Wireframes preview]()
