@@ -62,7 +62,9 @@
         {% if messages %}
           {% for message in messages %}
             <div class="row flashes">
-              <h5 class="blue-grey center-align">{{ message }}</h5>
+              <div class="col s12 m6 l6 offset-l3">
+              <h5 class="grey center-align">{{ message }}</h5>
+              </div>
             </div>
           {% endfor %}
         {% endif %}

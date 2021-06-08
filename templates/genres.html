@@ -4,7 +4,7 @@
 <h3 class="center-align">Manage Genres</h3>
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_genre') }}" class="btn-large light-blue darken2 text-shadow">
+        <a href="{{ url_for('add_genre') }}" class="btn-large grey darken2 text-shadow">
             Add Genre <i class="fas fa-plus-square right"></i>
         </a>
     </div>
@@ -17,11 +17,14 @@
     {% for genre in genres %}
     <div class="col s12 m3">
       <div class="card black center-align">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="static/images/genrebackground.jpg">
+      </div>
         <div class="card-content white-text">
           <span class="card-title">{{ genre.genre_name }}</span>
         </div>
         <div class="card-action">
-            <a href="{{ url_for('edit_genre', genre_id=genre._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+            <a href="{{ url_for('edit_genre', genre_id=genre._id) }}" class="waves-effect waves-light btn-small grey darken-2">Edit</a>
             <!-- Modal Trigger -->
            <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
 
