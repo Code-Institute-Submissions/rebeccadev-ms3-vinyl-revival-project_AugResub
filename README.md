@@ -62,7 +62,7 @@ As an Admin user I want to be able to:
 
 The db will consist of four collections. 
 
- ![bd biagram](readme_documentation/dbdiagram.png)
+ ![db diagram](readme_documentation/dbdiagram.png)
 
 #### Wireframes
 
