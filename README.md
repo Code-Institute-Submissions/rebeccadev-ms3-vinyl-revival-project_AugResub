@@ -62,7 +62,7 @@ As an Admin user I want to be able to:
 
 The db will consist of four collections. 
 
- ![bd biagram](/workspace/ms3-vinyl-revival-project/readme_documentation/dbdiagram.png)
+ ![bd biagram](readme_documentation/dbdiagram.png)
 
 #### Wireframes
 
