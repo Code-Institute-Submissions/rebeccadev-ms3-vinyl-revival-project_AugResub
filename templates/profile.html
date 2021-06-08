@@ -50,24 +50,23 @@
                         <span class="created-by right">
                         <em>Added by: {{ record.created_by }} </em></p>       
                         </span>           
-                    {% if session.user|lower == record.created_by|lower %}
-                    <a href="{{ url_for('edit_record', record_id=record._id) }}" class="waves-effect waves-light btn grey darken-2">Edit</a>
-                     <!-- Modal Trigger -->
-                    <a class="waves-effect waves-light btn modal-trigger grey" href="#modal1">Delete</a>
-
-                    <!-- Modal Structure -->
-                    <div id="modal1" class="modal">
-                        <div class="modal-content">
-                             <h4>Remove a record?</h4>
-                            <p>Are you sure you want to remove a record from your collection? </p>
+                        {% if session.user|lower == record.created_by|lower %}
+                        <a href="{{ url_for('edit_record', record_id=record._id) }}" class="waves-effect waves-light btn grey darken-2">Edit</a>
+                         <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn modal-trigger grey" href="#deletemodal-{{loop.index}}">Delete</a>
+                        <!-- Modal Structure -->
+                        <div id="deletemodal-{{loop.index}}" class="modal">
+                            <div class="modal-content">
+                                 <h4>Remove a record?</h4>
+                                <p>Are you sure you want to remove a record from your collection? </p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{{ url_for('delete_record', record_id=record._id) }}" class="modal-close waves-effect waves-white btn-flat">Delete</a>
+                                <a href="{{ url_for('get_record') }}" class="modal-close waves-effect waves-white btn-flat">No, take me back!</a> 
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <a href="{{ url_for('delete_record', record_id=record._id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
-                            <a href="{{ url_for('get_record') }}" class="modal-close waves-effect waves-green btn-flat">No, take me back!</a> 
+                        {% endif %}
                         </div>
-                    </div>
-                    {% endif %}
-                    </div>
                   
                 <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Extra info<i class="material-icons right">close</i></span>

@@ -26,17 +26,17 @@
         <div class="card-action">
             <a href="{{ url_for('edit_genre', genre_id=genre._id) }}" class="waves-effect waves-light btn-small grey darken-2">Edit</a>
             <!-- Modal Trigger -->
-           <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
+           <a class="waves-effect waves-light btn modal-trigger red" href="#deletemodal-{{loop.index}}">Delete</a>
 
            <!-- Modal Structure -->
-           <div id="modal1" class="modal">
+           <div id="deletemodal-{{loop.index}}" class="modal">
                <div class="modal-content">
                     <h4>Remove a genre?</h4>
                    <p>Are you sure you want to remove a genre?</p>
                </div>
                <div class="modal-footer">
-                   <a href="{{ url_for('delete_genre', genre_id=genre._id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
-                   <a href="{{ url_for('get_record') }}" class="modal-close waves-effect waves-green btn-flat">No, take me back!</a> 
+                   <a href="{{ url_for('delete_genre', genre_id=genre._id) }}" class="modal-close waves-effect waves-white btn-flat">Delete</a>
+                   <a href="{{ url_for('get_record') }}" class="modal-close waves-effect waves-white btn-flat">No, take me back!</a> 
                </div>
            </div>
         </div>
