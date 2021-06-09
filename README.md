@@ -3,8 +3,10 @@ Vinyl Revival
 
 
 
-Vinyl Revival has been created for my MS3 project with the code institute. Users of the website will be able to register, create a profile and upload their
-record collection. In addition they will be able to view other records and have the ability to leave reviews. 
+Vinyl Revival has been created for my MS3 project with the code institute. Users of the website will be able to register, create a profile and upload their record collection. In addition they will be able to view other records
+within the community collection and search records that have been uploaded. The website will build upon existing skills within HTML, CSS and 
+Javascript, and utilize new skills learned within Python, Jinja, using the 
+Flask framework and Mongodb.
 
 
 Please [click here](https://vinyl-revival-project.herokuapp.com) to view the website.
@@ -62,7 +64,7 @@ As an Admin user I want to be able to:
 
 The db will consist of four collections. 
 
- ![db diagram](readme_documentation/dbdiagram.png)
+ ![db diagram](readme_documentation/images/dbdiagram.png)
 
 #### Wireframes
 
@@ -101,6 +103,9 @@ against the heading font.
 Unsplash has been used for all the photography within the website. I chose modern images that would fit with
 the colour palette and provide a modern feel to the website. 
 
+**Cards**
+
+I have decided to use the card component within Materialize to display the data from the records. I feel this works well and emulates physically turning over a record to see the tracklisting and it can also showcase the vinyl album artwork well.
 
 
 ---
@@ -120,8 +125,9 @@ they have uploaded to the website.
 These are features that lie out of the current scope, but could be added added at a later date.
 
 - Link up to spotify API so tracks from albums could be listened to.
-- Videos added to vinyl album pages.
-- A blog highlighting albums from the community vinyl collection.  
+- Music videos added to vinyl album pages.
+- A blog highlighting albums from the community vinyl collection.
+
 
 
 ## Technologies 
@@ -140,9 +146,27 @@ The following technologies have been used in the project.
 
 ## Libraries and Frameworks
 
-- Materialize
-- Flask
-- Jinja
+* [Materialize](https://materializecss.com
+) a modern responsive CSS framework based on Material Design by Google.
+- [Flask](https://flask.palletsprojects.com/) - a micro web framework written in Python
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - a web template engine for the Python programming language
+
+## Resources
+
+The following resources have been used within the project.
+
+
+* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) for editing image sizes and editing the hero image.
+
+* [w3schools.com](https://www.w3schools.com/) - resource to improve general knowledge of HTML and CSS and Javascript
+
+* [Balsamiq](https://balsamiq.com/) - used for the creation of wireframes during UI design stage. 
+
+* [Stack Overflow](https://stackoverflow.com/) - general resource used for technical queries.
+
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - used to debug HTML and CSS and to view responsiveness on different screen sizes.
+
+* [dbdiagram.io](https://www.youtube.com/watch?v=T-VQUKeSU1w) - Database Relationship Diagrams Design Tool
 
 
 
