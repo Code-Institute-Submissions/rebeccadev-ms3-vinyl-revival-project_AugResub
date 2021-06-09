@@ -1,4 +1,5 @@
-Vinyl Revival
+# Vinyl Revival 
+## MS3 Code institute project 
 
 ![Wireframes preview](readme_documentation/images/responsivepreview.png)
 
@@ -191,6 +192,12 @@ The following resources have been used within the project.
 
 * [dbdiagram.io](https://www.youtube.com/watch?v=T-VQUKeSU1w) - Database Relationship Diagrams Design Tool
 
+## Testing
+
+All testing for the website can be found [here](/static/testing/TESTING.md)
+
+
+
 
 ## Deployment
 
@@ -243,3 +250,4 @@ for the app is unique.
 10. Click "view to launch the app" 
 
 
+## Credits
