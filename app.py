@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -72,7 +72,7 @@ def login():
                     flash("Welcome, {}".format(
                         request.form.get("username")))
                     return redirect(url_for(
-                        "profile", username=session["user"])) 
+                        "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -88,13 +88,14 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    #grab the session user's username from the database
+    # grab the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session['user']:
-        user_collection = mongo.db.record.find({"created_by":username})
-        return render_template("profile.html", username=username, user_collection=user_collection)
+        user_collection = mongo.db.record.find({"created_by": username})
+        return render_template(
+            "profile.html", username=username, user_collection=user_collection)
 
     return redirect(url_for("login"))
 
@@ -126,7 +127,7 @@ def add_record():
         mongo.db.record.insert_one(record)
         flash("Record Successfully Added")
         return redirect(url_for("get_record"))
-        
+
     genres = mongo.db.genres.find().sort("genre_name, 1")
     return render_template("add_record.html", genres=genres)
 
@@ -149,8 +150,6 @@ def edit_record(record_id):
         }
         mongo.db.record.update({"_id": ObjectId(record_id)}, submit)
         flash("Record Successfully Updated")
-         
-
     record = mongo.db.record.find_one({"_id": ObjectId(record_id)})
     genres = mongo.db.genres.find().sort("genre_name, 1")
     return render_template("edit_record.html", record=record, genres=genres)
@@ -169,7 +168,7 @@ def get_genres():
     return render_template("genres.html", genres=genres)
 
 
-@app.route("/add_genre", methods=["GET", "POST"])    
+@app.route("/add_genre", methods=["GET", "POST"])
 def add_genre():
     if request.method == "POST":
         genre = {
@@ -178,7 +177,7 @@ def add_genre():
         mongo.db.genres.insert_one(genre)
         flash("New Genre Added")
         return redirect(url_for("get_genres"))
-        
+
     return render_template("add_genre.html")
 
 
@@ -200,7 +199,7 @@ def edit_genre(genre_id):
 def delete_genre(genre_id):
     mongo.db.genres.remove({"_id": ObjectId(genre_id)})
     flash("Genre Successfully Deleted")
-    return redirect(url_for("get_genres"))    
+    return redirect(url_for("get_genres"))
 
 
 if __name__ == "__main__":
