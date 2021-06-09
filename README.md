@@ -62,16 +62,24 @@ As an Admin user I want to be able to:
 
 #### Database
 
-The db will consist of four collections. 
+The db will consist of four collections, users, record, genres and review.
+
+* The review collection was created to provide more indepth reviews of records.
+Due to time constraints rating was used instead. I would like to expand on
+this in the future to provide written reviews. 
+
 
  ![db diagram](readme_documentation/images/dbdiagram.png)
 
 #### Wireframes
 
-![Wireframes preview]()
-
 Wireframes have been created using a mobile first approach. 
-Please [click here](readmedocumentation/READMEimages/) to view the PDF showing full wireframes for the site. 
+Please [click here](readmedocumentation/pdf/wireframes.pdf) to view the PDF showing full wireframes for the site. 
+
+
+![Wireframes preview](readme_documentation/images/wireframespreview.png)
+
+
 
 ### Surface
 I have taken on inspiration from gaming websites such as the Oculus website. I feel the simple colour scheme
@@ -150,6 +158,21 @@ The following technologies have been used in the project.
 ) a modern responsive CSS framework based on Material Design by Google.
 - [Flask](https://flask.palletsprojects.com/) - a micro web framework written in Python
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - a web template engine for the Python programming language
+
+**Integrations**
+- [Font Awesome](https://fontawesome.com/) - used for icons within the footer bar. 
+
+- [Google fonts](https://fonts.google.com/) - A library of 1005 free licensed font families. 
+
+
+**IDE, Version control, Repository storage**
+
+* [Git](https://git-scm.com/) - Distributed Version Control tool to store * versions of files and track changes.
+
+* [GitPod](https://gitpod.io/) - Workspace IDE.
+
+* [GitHub](https://github.com/) - Hosting service used to manage my Git repositories.
+
 
 ## Resources
 
