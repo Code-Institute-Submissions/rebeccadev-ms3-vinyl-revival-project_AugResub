@@ -192,4 +192,54 @@ The following resources have been used within the project.
 * [dbdiagram.io](https://www.youtube.com/watch?v=T-VQUKeSU1w) - Database Relationship Diagrams Design Tool
 
 
+## Deployment
+
+## Cloning the repository
+To clone the repository the following steps need to be taken.
+
+1. On GitHub, navigate to the main page of the repository.
+2. Click the green Clone or download Button under the repository name.
+3. Open Git Bash. 
+4. Change the current working directory to the location where you want the cloned directory. 
+5. Type git clone, and then paste the URL you copied earlier. 
+6. Press enter to create the local clone.
+
+### Run locally
+1. Type pip3 install -r requirements.txt in the CLI to install the modules listed in the requirements.txt file.
+2.  Create a database in mongodb and copy the following collections "users" "genres" "record" "review"
+3. In the root directory of your project, create an env.py file and add it to your .gitignore file.This is where sensitive information will be held so we need to ensure it isn't pushed to the repo.
+Copy the content below to link up the database.
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "secret_key")
+os.environ.setdefault("MONGO_URI", "mongo_uri")
+os.environ.setdefault("MONGO_DBNAME", "mongo_dbname")
+```
+
+
+### Deploying to Heroku
+
+1. Use command pip3 freeze --local> requirements.txt to create a requirements
+file that collects all of the required dependancies. 
+2. Within the root directory create a procfile and enter web: python app.py > Procfile
+Enter the command pip3 freeze > requirements.txt
+3. Push the requirements.txt and Procfile to the repository. 
+4. Log in to Heroku and click the link for create a new app. Ensure the name
+for the app is unique.
+5. Within Heroku locate the Deploy tab. Within the deployment method click on Github.
+6. Search for the repository name and click connect.
+7. Locate the settings tab and click Reveal Config Vars
+8. Add the following variables: 
+- IP: 0.0.0.0.
+- PORT: 5000
+-SECRET_KEY
+- MONGO_URI
+- MONGO_DBNAME: vinyl_collector
+9. Click on deploy branch. After it is built you will see the message "Your App was successfully deployed"
+10. Click "view to launch the app" 
+
 
