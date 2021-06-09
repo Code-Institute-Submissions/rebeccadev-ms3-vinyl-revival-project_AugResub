@@ -1,6 +1,6 @@
 Vinyl Revival
 
-
+![Wireframes preview](readme_documentation/images/responsivepreview.png)
 
 
 Vinyl Revival has been created for my MS3 project with the code institute. Users of the website will be able to register, create a profile and upload their record collection. In addition they will be able to view other records
