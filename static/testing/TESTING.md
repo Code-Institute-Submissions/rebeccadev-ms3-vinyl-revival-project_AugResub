@@ -1,7 +1,7 @@
 # Testing
 
 - [Code Validators](#Code-Validators)
-- [Lighhouse](#Lighthouse)
+- [Lighthouse](#Lighthouse)
 - [Testing User Stories](#User-Stories)
 - [Manual Testing](#Manual-Testing)
 
@@ -52,3 +52,5 @@ Lighthouse was used to test the performance of the website. See result below.
 ## Testing User Stories
 
 Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/pdf/user_story_testing.pdf) to see testing for user stories. 
+
+
