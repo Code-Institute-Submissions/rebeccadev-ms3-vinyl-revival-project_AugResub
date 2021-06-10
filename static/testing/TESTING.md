@@ -51,20 +51,4 @@ Lighthouse was used to test the performance of the website. See result below.
 
 ## Testing User Stories
 
-> -  *Use the site with ease on mobile, tablet and pc devices.*
-
-
-> -  *View records uploaded by the community*.
-
-
-> -  *Add my vinyl records to the website*
-
-
-> -  *View my vinyl collection on my profile page.*
-
-
-> - *Highlight which records are favourites.*
-
-
-> - *Search records within the database.*
-
+Please click [here](/workspace/ms3-vinyl-revival-project/readme_documentation/pdf/user_story_testing.pdf) to see testing for user stories. 
