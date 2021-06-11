@@ -73,6 +73,9 @@
             </form>
         </div>
     </div>
+
+    
+    {% if record|length > 0 %}
     {% for record in record %}
     <div class="row">
             
@@ -128,5 +131,9 @@
         </div>
                   
     {% endfor %}
-      
+    {% else %}
+    <div class="center-align red-text">
+        <h5> Sorry, no results found </h3>
+    <div>
+    {% endif %}  
 {% endblock %}
