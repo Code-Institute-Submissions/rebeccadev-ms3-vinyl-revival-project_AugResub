@@ -8,7 +8,13 @@
 
 ## Code Validators
 
-### W3C 
+### W3C
+
+Used to test HTML. Errors included an empty div tag and span tag. These were then corrected.
+![HTML TEST](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/images/htmlcheck.png?raw=true)
+
+
+### Jigsaw
 
 Used to test CSS. No errors found
 
