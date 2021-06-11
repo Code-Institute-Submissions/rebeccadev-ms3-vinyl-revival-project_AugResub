@@ -65,3 +65,7 @@ Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob
 
 Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/pdf/manualtesting.pdf) to see testing the manual testing log. This
 also includes CRUD testing.
+
+## Crud functionality test
+
+Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/pdf/crudphototests.pdf) to see a documented crud functionality test. 
