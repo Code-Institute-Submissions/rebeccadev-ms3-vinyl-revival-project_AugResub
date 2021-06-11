@@ -12,12 +12,12 @@ Flask framework and Mongodb.
 
 Please [click here](https://vinyl-revival-project.herokuapp.com) to view the website.
 
-<details open>
+<details closed>
 <summary> Note for project assessor </summary>
 <br>
  Please use the following information to access the admin functions.
  username: admin <br>
- password: password <br>
+ password: password <br> <p>&nbsp;</p>
 </details>  
 <p>&nbsp;</p>
 
@@ -166,6 +166,7 @@ I have decided to use the card component within Materialize to display the data 
 - **Profile page:** users will be directed to their profile page upon log in. This displays all of the records they have uploaded to the website. 
 - **Search feature** users are able to search records uploaded by all users to the website.
 - **Footer:** with social media links to enable easy access to other social media sites which can offer more information to the user.
+- **Error handling page** 404 and 500 error handling page to reroute users if an error occurs. 
 
 ### Features to be added
 
