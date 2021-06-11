@@ -69,6 +69,33 @@ As an Admin user I want to be able to:
 > -  *Add, edit and delete genres of music.*
 
 
+## Scope
+
+Due to time contraints I opted to make an MVP where CRUD functionality exists
+for both users and admin users.
+
+General user 
+> - Create - Add a record to their personal collection
+> - Edit - Edit and update records that they have added.
+> - Delete - Delete records that they have added to their collection.
+
+Admin users also have additional crud fuctoinality.
+> - Create genre
+> - Edit and update genres
+> - Delete genres
+
+In addition the project will also include a search feature.
+
+Phase two of the project would add the following elements.
+
+>- Pagination - as the database expands pagination will be important, particuarly on mobile devices.
+
+>- Having the option to pre-fill the image url with a default image if the user didn't want to upload
+an image. 
+
+Both parts of phase two would help to improve the UX design.
+
+
 ### Skeleton
 
 #### Database
