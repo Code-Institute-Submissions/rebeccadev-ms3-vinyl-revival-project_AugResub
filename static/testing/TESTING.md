@@ -2,15 +2,16 @@
 
 - [Code Validators](#Code-Validators)
 - [Lighthouse](#Lighthouse)
-- [Testing User Stories](#User-Stories)
-- [Manual Testing](#Manual-Testing)
+- [Testing User Stories](#Testing-User-Stories)
+- [Manual Testing](#Manual-testing-log)
 
 
 ## Code Validators
 
 ### W3C
 
-Used to test HTML. Errors included an empty div tag and span tag. These were then corrected.
+Used to test HTML. Errors included an empty div tag and span tag. These were then corrected. The
+leftover errors were related to jina.
 ![HTML TEST](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/images/htmlcheck.png?raw=true)
 
 
@@ -62,4 +63,5 @@ Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob
 
 ## Manual testing log
 
-Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/pdf/manualtesting.pdf) to see testing the manual testing log.  
+Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/pdf/manualtesting.pdf) to see testing the manual testing log. This
+also includes CRUD testing.
