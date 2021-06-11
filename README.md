@@ -89,6 +89,8 @@ of black, white and grey makes for a modern and clean look for the website.
 
 **Colours**
 
+![colour scheme](/workspace/ms3-vinyl-revival-project/readme_documentation/images/coolors.png)
+
 White space has been used to provide a sense of calm,
 
 I have used (#ffffff) for my main text to make the typography contrasting and clear to the user against the white background. 
@@ -263,6 +265,11 @@ for the app is unique.
 
 
 ## Credits
+
+### Website Inspiration
+
+
+
 
 ### Copy
 - Copy for the header paragraph was taken from the [NME](https://www.nme.com/news/music/uk-vinyl-sales-in-2020-are-the-highest-since-the-early-90s-2846310) website
