@@ -12,6 +12,17 @@ Flask framework and Mongodb.
 
 Please [click here](https://vinyl-revival-project.herokuapp.com) to view the website.
 
+<details open>
+<summary> Note for project assessor </summary>
+<br>
+ Please use the following information to access the admin functions.
+ username: admin <br>
+ password: password <br>
+</details>
+
+
+
+
 ### Index
 
 - [Ux](#ux)
@@ -192,7 +203,7 @@ The following resources have been used within the project.
 
 * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - used to debug HTML and CSS and to view responsiveness on different screen sizes.
 
-* [dbdiagram.io](https://www.youtube.com/watch?v=T-VQUKeSU1w) - Database Relationship Diagrams Design Tool
+* [dbdiagram.io](https://dbdiagram.io/home) - Database Relationship Diagrams Design Tool
 
 ## Testing
 
