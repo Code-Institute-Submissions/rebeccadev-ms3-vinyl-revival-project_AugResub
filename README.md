@@ -89,9 +89,9 @@ of black, white and grey makes for a modern and clean look for the website.
 
 **Colours**
 
-![colour scheme](/workspace/ms3-vinyl-revival-project/readme_documentation/images/coolors.png)
+![colour scheme](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/images/coolors.png?raw=true)
 
-White space has been used to provide a sense of calm,
+I wanted to make a modern design, utilising a monochrome colour palette. White space has also been used to provide a sense of calm.
 
 I have used (#ffffff) for my main text to make the typography contrasting and clear to the user against the white background. 
 and have used (#000000) and (#ffffff) for my text within the footer section to stand out against the grey background. 
@@ -151,7 +151,7 @@ The following technologies have been used in the project.
 
 - CSS
 
-- Javascript
+- Jquery
 
 - Python
 
@@ -267,6 +267,9 @@ for the app is unique.
 ## Credits
 
 ### Website Inspiration
+- I have taken inspiration from the Oculus website. The monochrome colour palette and alot
+of whitespace make for a modern feel which I wanted to emulate within my site.
+![oculus website screenshot](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/images/oculuswebsite.png?raw=true)
 
 
 
