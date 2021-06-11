@@ -93,10 +93,10 @@
             <ul>
               <li><a href="{{ url_for('get_record') }}" class="white-text">Home</a></li>
                 {% if session.user %}
-                  <li><a href="{{ url_for('profile', username=session['user']) }}"class="white-text" >Profile</a></li>
-                  <li><a href="{{ url_for('add_record') }}"class="white-text" >Add Record</a></li>
+                  <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text" >Profile</a></li>
+                  <li><a href="{{ url_for('add_record') }}" class="white-text" >Add Record</a></li>
                   {% if session.user|lower == "admin"|lower  %}
-                    <li><a href="{{ url_for('get_genres') }}"class="white-text" >Manage Genres</a></li>
+                    <li><a href="{{ url_for('get_genres') }}" class="white-text" >Manage Genres</a></li>
                   {% endif %}
                   <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
                 {% else %}
