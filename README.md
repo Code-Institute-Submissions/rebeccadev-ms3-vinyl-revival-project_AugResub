@@ -196,8 +196,20 @@ The following resources have been used within the project.
 
 All testing for the website can be found [here](/static/testing/TESTING.md)
 
+ ## Problems and solutions
 
+### Design 
+ - Card sizing
+ I had problems with card sizing initally during the project. To ensure all card sizing was
+ uniform I used the Materialize size class options
 
+### Crud functionality
+
+Delete function 
+
+- During the development process I discovered that my delete functionality wasn't working correctly.
+When clicking delete on an album it would delete the first record the user added rather than the specific album that the user wanted to delete. I found the modal to be the cause of this issue. 
+To resolve it a unique reference to the modal ID was needed. I opted to use loop.index to ensure it was unique.
 
 ## Deployment
 
@@ -251,3 +263,33 @@ for the app is unique.
 
 
 ## Credits
+
+### Copy
+- Copy for the header paragraph was taken from the [NME](https://www.nme.com/news/music/uk-vinyl-sales-in-2020-are-the-highest-since-the-early-90s-2846310) website
+
+The rest of the copy was written by myself.
+
+### Code
+
+- The project built upon the task manager mini project from The Code Institute.
+
+- Materialize components were used for alot of elements, such as the cards, modals and
+navbar.
+
+- The jquery code for dynamically adding and removing input fields was found on [Stack Overflow](https://stackoverflow.com/questions/47145021/add-remove-multiple-inputs-type-text-using-jquery)
+
+### Imagery
+
+- [Unsplash](https://unsplash.com/) was used for the photography on the website.
+
+- [Icons8](https://icons8.com/icons) was used for the plus and minus form icons.
+
+## Acknowledgements
+
+- Channel lead Ed for advice and support. A great help for me during the planning and development of this project.
+
+- New channel lead BenKav for help with technical queries and advice given for my project.
+
+- Tutor support for help with technical queries, in particular Michael and Igor.
+
+- My mentor Aaron Sinnot for their advice and help throughout the project. 
