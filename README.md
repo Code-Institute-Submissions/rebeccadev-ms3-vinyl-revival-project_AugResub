@@ -18,10 +18,8 @@ Please [click here](https://vinyl-revival-project.herokuapp.com) to view the web
  Please use the following information to access the admin functions.
  username: admin <br>
  password: password <br>
-</details>
-
-
-
+</details>  
+<p>&nbsp;</p>
 
 ### Index
 
@@ -58,6 +56,7 @@ As a user I want to be able to:
 > -  *Use the site with ease on mobile, tablet and pc devices.*
 > -  *View records uploaded by the community*.
 > -  *Add my favourite vinyl records to the website*
+> -  *Delete records from my collection*
 > -  *View my vinyl collection on my profile page.*
 > - *Highlight which records are favourites.*
 > - *Search records within the database.*
@@ -137,8 +136,7 @@ I have decided to use the card component within Materialize to display the data 
 
 - **Registration page** where users are able to register for a new account for the website.
 - **Log in Page** where users are able to log in.
-- **Profile page:** users will be directed to their profile page upon log in. This displays all of the records
-they have uploaded to the website. 
+- **Profile page:** users will be directed to their profile page upon log in. This displays all of the records they have uploaded to the website. 
 - **Search feature** users are able to search records uploaded by all users to the website.
 - **Footer:** with social media links to enable easy access to other social media sites which can offer more information to the user.
 
