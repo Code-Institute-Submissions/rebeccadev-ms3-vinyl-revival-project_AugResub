@@ -4,6 +4,7 @@
 - [Lighthouse](#Lighthouse)
 - [Testing User Stories](#Testing-User-Stories)
 - [Manual Testing](#Manual-testing-log)
+- [Error Handling](#Error-Handling)
 
 
 ## Code Validators
@@ -69,3 +70,9 @@ also includes CRUD testing.
 ## Crud functionality test
 
 Please click [here](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/pdf/crudphototests.pdf) to see a documented crud functionality test. 
+
+## Error Handling
+
+Please find image below of 404 as a result of testing a missing page. 
+
+![404 screenshot](https://github.com/rebeccadev/ms3-vinyl-revival-project/blob/master/readme_documentation/images/error404.png)
