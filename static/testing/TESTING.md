@@ -4,6 +4,7 @@
 - [Lighthouse](#Lighthouse)
 - [Testing User Stories](#Testing-User-Stories)
 - [Manual Testing](#Manual-testing-log)
+- [Crud functionality test](#Crud-functionality-test)
 - [Error Handling](#Error-Handling)
 
 
