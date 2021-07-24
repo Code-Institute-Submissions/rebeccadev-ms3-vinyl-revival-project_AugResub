@@ -48,7 +48,7 @@
                 </div>
                     <div class="card-action">
                         <span class="created-by right">
-                        <em>Added by: {{ record.created_by }} </em></p>       
+                        <em>Added by: {{ record.created_by }} </em>       
                         </span>           
                         {% if session.user|lower == record.created_by|lower %}
                         <a href="{{ url_for('edit_record', record_id=record._id) }}" class="waves-effect waves-light btn grey darken-2">Edit</a>
